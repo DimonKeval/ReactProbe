@@ -3,7 +3,7 @@ import {IdentData} from "./IdentData";
 import {TeleData} from "./TeleData";
 
 export function AllData(props){
-    return <p>
+    return <>
         {/*<IdentData {...props}/>*/}
         {/*<TeleData {...props}/>*/}
         <IdentData name={props.name}
@@ -17,5 +17,5 @@ export function AllData(props){
             apartmentNumber={props.apartmentNumber}
             city={props.city}
             country={props.country}/>
-    </p>;
+    </>;
 }

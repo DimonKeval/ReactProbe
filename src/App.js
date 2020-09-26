@@ -5,7 +5,11 @@ import {Image} from "./Image";
 import {IdentData} from "./IdentData";
 import {TeleData} from "./TeleData";
 import {AllData} from "./AllData";
+import {CustomButton} from "./CustomButton";
 
+function handleClick(){
+    console.log('now');
+}
 
 function App() {
     return <>
@@ -28,6 +32,11 @@ function App() {
                  apartmentNumber='321'
                  city='BigCity'
                  country='NiceCountry'/>
+        <CustomButton defaultLabel="Label on button"
+                      start={1000}
+                      reverse={false}
+                      onClick={handleClick}
+        />
     </>;
 }
 
