@@ -16,8 +16,7 @@ export function CustomButton(props){
 
     return <>
         <button onClick={()=>{reactionOnClick()}}>
-            {/*można bez "state" -> {count == props.start ? text : count}*/}
-            {state ? count : text}
+            {state ? count : text} {}
         </button>
 </>
 }
