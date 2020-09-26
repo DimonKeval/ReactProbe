@@ -1,5 +1,9 @@
 import React from 'react';
+import {Greeting} from "./Greeting";
 
-export  function MyComponent(){
-    return <p> Hello world!</p>;
+export  function MyComponent(props){
+    return <p>Hello {props.name}!
+        <Greeting name={props.name}/>
+        <Greeting{...props}/>
+    </p>;
 }
