@@ -10,12 +10,13 @@ import {MyComponent} from "./MyComponent";
 import {Questionnaire} from "./questionnaire";
 import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 import {Nested} from "./Nested";
+import {BetterNester} from "./BetterNester";
 
 
 function App() {
     return <>
-        <Questionnaire/>
-        <Image source='/imgforprobe.jpg' defaultName='some image'/>
+        {/*<Questionnaire/>*/}
+        {/*<Image source='/imgforprobe.jpg' defaultName='some image'/>*/}
         {/*<IdentData name='Dmytro' lastName='Kovalskyi' pesel='12345678901'/>*/}
         {/*<TeleData phoneNumber='+48123456789'*/}
         {/*          email='emailfortest@email.email'*/}
@@ -34,28 +35,31 @@ function App() {
         {/*         apartmentNumber='321'*/}
         {/*         city='BigCity'*/}
         {/*         country='NiceCountry'/>*/}
-        <MyComponent/>
+        {/*<MyComponent/>*/}
         <Router>
             <Switch>
-                <Route path='/test/:id' exact>
-                    <Nested/>
-                </Route>
-                <Route path='/xyz'>
-                    <div>xyz</div>
+                {/*<Route path='/test/:id' exact>*/}
+                {/*    <Nested/>*/}
+                {/*</Route>*/}
+                {/*<Route path='/xyz'>*/}
+                {/*    <div>xyz</div>*/}
+                {/*</Route>*/}
+                <Route>
+                    <BetterNester/>
                 </Route>
             </Switch>
-            <br/>
-            {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-                .map(el => <>
-                        <Link to={`/test/${el}`}>test/{el}</Link>
-                        <br/>
-                    </>
-                )}
+            {/*<br/>*/}
+            {/*{[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]*/}
+            {/*    .map(el => <>*/}
+            {/*            <Link to={`/test/${el}`}>test/{el}</Link>*/}
+            {/*            <br/>*/}
+            {/*        </>*/}
+            {/*    )}*/}
         </Router>
-        <CustomButton defaultLabel="Label on button"
-                      start={1000}
-                      reverse={false}
-        />
+        {/*<CustomButton defaultLabel="Label on button"*/}
+        {/*              start={1000}*/}
+        {/*              reverse={false}*/}
+        {/*/>*/}
     </>;
 }
 
