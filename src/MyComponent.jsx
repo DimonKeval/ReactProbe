@@ -81,7 +81,7 @@ function renderPerson(el) {
         city={el.city}
         country={el.country}
     />
-        <Link to={'/'}>Do you want to go back to list?</Link>
+        <Link to={'/users'}>Do you want to go back to list?</Link>
     </>;
 }
 
@@ -108,9 +108,9 @@ function tablingPersons() {
     </table>
 }
 
-function fillTable(el) {
+function fillTable(el, index) {
     return <tr>
-        <td><Link to={'/' + el.name.toLowerCase()}>More</Link></td>
+        <td><Link to={'/users/' + index}>More</Link></td>
         <td>{el.name}</td>
         <td>{el.lastName}</td>
         {/*<td>{el.pesel}</td>*/}

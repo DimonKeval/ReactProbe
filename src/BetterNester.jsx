@@ -1,6 +1,7 @@
 import React from "react";
 import {Link, Route, Switch, useRouteMatch} from 'react-router-dom';
 import {MyComponent} from "./MyComponent";
+import {About} from "./About";
 
 export function BetterNester() {
     const match = useRouteMatch();
@@ -21,18 +22,14 @@ export function BetterNester() {
             </Route>
 
             <Route path={'/about'}>
-                <div>This site was created for learning how use React.js in wed development. <br/>
-                    I hope it's give me good experience, which can I use in future.
-                </div>
-                <br/>
-                <Link to={'/'} exact>Go to home page.</Link>
+                <About/>
             </Route>
 
-            <Route path={'/tom'} exact><MyComponent id={0}/></Route>
+            <Route path={'/users/0'} exact><MyComponent id={0}/></Route>
 
-            <Route path={'/alex'} exact><MyComponent id={1}/></Route>
+            <Route path={'/users/1'} exact><MyComponent id={1}/></Route>
 
-            <Route path={'/test'} exact><MyComponent id={2}/></Route>
+            <Route path={'/users/2'} exact><MyComponent id={2}/></Route>
 
         </Switch>
     </div>;

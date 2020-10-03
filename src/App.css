@@ -39,3 +39,15 @@
 table, td {
   border: 1px solid black;
 }
+
+.aboutPage {
+  background-color: darksalmon;
+  font-size: x-large;
+}
+
+.linkFromAbout{
+  background-color: goldenrod;
+  font-family: "Arial Black";
+  font-size: xx-large;
+
+}
