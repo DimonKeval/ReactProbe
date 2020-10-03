@@ -16,7 +16,7 @@ export function CustomButton(props){
 
     return <>
         <button onClick={()=>{reactionOnClick()}}>
-            {state ? count : text} {}
+            {state ? count : text}
         </button>
 </>
 }
