@@ -7,7 +7,7 @@ import {TeleData} from "./TeleData";
 import {AllData} from "./AllData";
 import {CustomButton} from "./CustomButton";
 import {MyComponent} from "./MyComponent";
-import {Questionnaire} from "./questionnaire";
+import {Questionnaire} from "./Questionnaire";
 import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 import {Nested} from "./Nested";
 import {BetterNester} from "./BetterNester";
