@@ -2,28 +2,17 @@ import React from 'react';
 import {Greeting} from "./Greeting";
 import {AllData} from "./AllData";
 import {BetterNester} from "./BetterNester";
-import {Link} from "react-router-dom";
+import {Link, Route} from "react-router-dom";
 import {Questionnaire} from "./Questionnaire";
 
 export function MyComponent(props) {
 
-    if (props.create){
+    if (props.create) {
         return <div>
             <Questionnaire users={props.users} setArray={props.setArray}/>
         </div>;
-    }
 
-    if (!isNaN(props.id)) {
-        return <div>
-            {props.users.map(
-                (el, index) => {
-                    if (index === props.id) {
-                        return renderPerson(el);
-                    }
-                }
-            )
-            }
-        </div>;
+
     } else {
 
         return <>
@@ -52,9 +41,11 @@ export function MyComponent(props) {
         />
             <Link to={'/users'}>Do you want to go back to list?</Link>
             <br/>
-            <Link onClick={() => {props.setArray(props.users.filter(el => el.name !== name))}} to={'/users'}>Delete user</Link>
-            </>;
-            }
+            <Link onClick={() => {
+                props.setArray(props.users.filter(el => el.name !== name))
+            }} to={'/users'}>Delete user</Link>
+        </>;
+    }
 
     function tablingPersons() {
         return <table border="1">
@@ -80,8 +71,9 @@ export function MyComponent(props) {
     }
 
     function fillTable(el, index) {
+        let name = el.name;
         return <tr key={index}>
-            <td><Link to={'/users/' + index}>More</Link></td>
+            <td><Link to={`/users/${index}`} onClick={() => details(name, index)}>More</Link></td>
             <td>{el.name}</td>
             <td>{el.lastName}</td>
             {/*<td>{el.pesel}</td>*/}
@@ -93,5 +85,11 @@ export function MyComponent(props) {
             {/*<td>{el.city}</td>*/}
             {/*<td>{el.country}</td>*/}
         </tr>
+    }
+
+    function details(name, index) {
+        return <Route path={`/users/${index}`} exact>
+            {renderPerson(props.users.map(el => el.name === name))}
+        </Route>;
     }
 }

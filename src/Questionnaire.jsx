@@ -24,6 +24,6 @@ export function Questionnaire(props) {
         <Question label='apartmentNumber' id='apartmentNumber' text={apartmentNumber} setText={setApartmentNumber}/>
         <Question label='city' id='city' text={city} setText={setCity}/>
         <Question label='country' id='country' text={country} setText={setCountry}/>
-        <Link to={'/users'} onClick={() => {props.setArray([...props.users, {name: name, lastname: lastname, pesel: pesel, phoneNumber: phoneNumber, email: email, street: street, buildNumber: buildNumber, apartmentNumber: apartmentNumber, city: city, country: country}])}}>Create new one!:)</Link>
+        <Link to={'/users'} onClick={() => {props.setArray([...props.users, {name: name, lastName: lastname, pesel: pesel, phoneNumber: phoneNumber, email: email, street: street, buildNumber: buildNumber, apartmentNumber: apartmentNumber, city: city, country: country}])}}>Create new one!:)</Link>
     </div>;
 }

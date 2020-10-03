@@ -72,11 +72,11 @@ export function BetterNester() {
                 <MyComponent create={true} users={array} setArray={setArray}/>
             </Route>
 
-            <Route path={'/users/0'} exact><MyComponent id={0} users={array} setArray={setArray}/></Route>
+            {/*<Route path={'/users/0'} exact><MyComponent id={0} users={array} setArray={setArray}/></Route>*/}
 
-            <Route path={'/users/1'} exact><MyComponent id={1} users={array} setArray={setArray}/></Route>
+            {/*<Route path={'/users/1'} exact><MyComponent id={1} users={array} setArray={setArray}/></Route>*/}
 
-            <Route path={'/users/2'} exact><MyComponent id={2} users={array} setArray={setArray}/></Route>
+            {/*<Route path={'/users/2'} exact><MyComponent id={2} users={array} setArray={setArray}/></Route>*/}
 
         </Switch>
     </div>;
